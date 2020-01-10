@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane
+        id="masterAnchorPane"
+        fx:id="projectMasterTabs"
+        prefHeight="600.0"
+        prefWidth="700.0"
+        xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="se.turingturtles.controllers.ProjectMasterController"
+>
+    <children>
+        <BorderPane
+                AnchorPane.bottomAnchor="0.0"
+                AnchorPane.leftAnchor="0.0"
+                AnchorPane.rightAnchor="0.0"
+                AnchorPane.topAnchor="0.0"
+        >
+            <center>
+                <TabPane
+                        fx:id="masterTab"
+                        side="LEFT"
+                        tabClosingPolicy="UNAVAILABLE"
+                        BorderPane.alignment="CENTER"
+                >
+                    <tabs>
+                        <Tab
+                                fx:id="projectOverviewTab"
+                                text="Overview"
+                        >
+                            <content>
+                                <fx:include fx:id="overviewTab" source="projectoverview.fxml" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tasksTab" text="Tasks">
+                            <content>
+                                <fx:include fx:id="taskPage" source="taskpage.fxml" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="teamMembersTab" text="Team">
+                            <content>
+                                <fx:include fx:id="teamPage" source="teampage.fxml" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="riskTab" text="Risk">
+                            <content>
+                                <fx:include fx:id="riskPage" source="riskpage.fxml" />
+                            </content>
+                        </Tab>
+                        <Tab fx:id="projectManagementTab" text="Management">
+                            <content>
+                                <fx:include fx:id="projectManagementPage" source="projectmanagement.fxml" />
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </center>
+         <top>
+            <AnchorPane prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                        <ImageView fitHeight="30.0" fitWidth="141.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                            <image>
+                                <Image url="@../images/turtlenode.png" />
+                            </image>
+                        </ImageView>
+                        <Text styleClass="h1-tab" layoutX="76.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Turing turtle" />
+                  <Button fx:id="startPageButton" layoutX="619.0" layoutY="12.0" mnemonicParsing="false" onAction="#backToStartPage" text="Start page" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0" />
+               </children>
+            </AnchorPane>
+         </top>
+        </BorderPane>
+    </children>
+</AnchorPane>

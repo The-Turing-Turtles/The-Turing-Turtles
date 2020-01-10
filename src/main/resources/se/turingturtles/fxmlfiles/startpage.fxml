@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane
+        maxHeight="-Infinity"
+        maxWidth="-Infinity"
+        minHeight="-Infinity"
+        minWidth="-Infinity"
+        prefHeight="480.0"
+        prefWidth="640.0"
+        xmlns="http://javafx.com/javafx/"
+        xmlns:fx="http://javafx.com/fxml/"
+        fx:controller="se.turingturtles.controllers.StartPageController"
+>
+   <center>
+      <AnchorPane
+              styleClass="content-box"
+              maxHeight="-Infinity"
+              maxWidth="-Infinity"
+              minHeight="-Infinity"
+              minWidth="-Infinity"
+              prefHeight="430.0"
+              prefWidth="600.0"
+
+      >
+         <children>
+            <!-- Application logo -->
+            <ImageView
+                    fitHeight="130.0"
+                    fitWidth="130.0"
+                    layoutX="75.0"
+                    layoutY="48.0"
+                    pickOnBounds="true"
+                    preserveRatio="true"
+            >
+               <image>
+                  <Image
+                          url="@../images/turtle.png"
+                  />
+               </image>
+            </ImageView>
+            <!-- Application brand name -->
+            <Text
+                    styleClass="h1"
+                    layoutX="260.0"
+                    layoutY="98.0"
+                    strokeType="OUTSIDE"
+                    strokeWidth="0.0"
+                    text="Turing Turtle"
+            />
+            <Text
+                    styleClass="h2"
+                    layoutX="260.0"
+                    layoutY="138.0"
+                    strokeType="OUTSIDE"
+                    strokeWidth="0.0"
+                    text="PROJECT MANAGEMENT"
+            />
+            <!-- Action buttons and action disclaimer text -->
+            <Button
+                    styleClass="big-button"
+                    fx:id="createProjectButton"
+                    layoutX="75.0"
+                    layoutY="270.0"
+                    onAction="#createNewProject"
+                    prefWidth="200.0"
+                    text="Create project"
+            />
+            <Button
+                    styleClass="big-button"
+                    fx:id="loadProjectButton"
+                    layoutX="325.0"
+                    layoutY="270.0"
+                    onAction="#loadProject"
+                    prefWidth="200.0"
+                    text="Load project"
+            />
+            <Text
+                    id="disclaimer"
+                    layoutX="75.0"
+                    layoutY="380"
+                    strokeType="OUTSIDE"
+                    strokeWidth="0.0"
+                    text="Disclaimer: Current projects are overwritten whenever new ones are created."
+            />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
